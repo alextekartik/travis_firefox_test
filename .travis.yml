@@ -1,0 +1,12 @@
+addons:
+  firefox: latest
+
+language: dart
+sudo: required
+dist: xenial
+dart:
+  - stable
+  - beta
+  - dev
+script:
+ - dart ./tool/travis.dart
