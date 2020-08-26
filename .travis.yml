@@ -1,3 +1,6 @@
+env:
+  global:
+    - MOZ_HEADLESS=1
 addons:
   firefox: latest
 
@@ -8,5 +11,7 @@ dart:
   - stable
   - beta
   - dev
+before_script:
+  - export DISPLAY=:0.0
 script:
- - dart ./tool/travis.dart
+  - dart ./tool/travis.dart
